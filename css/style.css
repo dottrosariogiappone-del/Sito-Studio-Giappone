@@ -915,6 +915,35 @@ a:hover { color: var(--gold-light); }
     color: var(--gold);
 }
 
+.guides-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.guide-badge {
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    background: rgba(200, 169, 81, 0.15);
+    color: var(--gold);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.guide-card-download:hover .guide-link svg {
+    animation: downloadBounce 0.6s ease;
+}
+
+@keyframes downloadBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
 .guide-link:hover {
     gap: 12px;
 }
