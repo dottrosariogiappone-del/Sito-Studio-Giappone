@@ -345,14 +345,14 @@
                     <div class="guide-badge">PDF</div>
                     <h3>Guida all'Offerta Tecnica</h3>
                     <p>Come si scrive un'offerta tecnica efficace nelle gare d'appalto: struttura, contenuti e strategie per massimizzare il punteggio tecnico.</p>
-                    <a href="guide/Studio%20Giappone%20-%20Guida%20Offerta%20Tecnica.pdf" target="_blank" class="guide-link">Scarica la guida <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/></svg></a>
+                    <a href="#" class="guide-link guide-download-btn" data-guide="guide/Studio%20Giappone%20-%20Guida%20Offerta%20Tecnica.pdf">Scarica la guida <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/></svg></a>
                 </div>
                 <div class="guide-card guide-card-download" data-aos>
                     <div class="guide-number">02</div>
                     <div class="guide-badge">PDF</div>
                     <h3>Struttura Aziendale <span class="amp">&</span> Modello 231</h3>
                     <p>Perché la struttura aziendale è il vero motore competitivo nelle gare pubbliche: dal punteggio tecnico al Modello 231, il filo logico che lega organizzazione, qualità e affidabilità.</p>
-                    <a href="guide/Studio_Giappone_Struttura_Solida_OEPV_231.pdf" target="_blank" class="guide-link">Scarica la guida <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/></svg></a>
+                    <a href="#" class="guide-link guide-download-btn" data-guide="guide/Studio_Giappone_Struttura_Solida_OEPV_231.pdf">Scarica la guida <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/></svg></a>
                 </div>
             </div>
         </div>
@@ -623,6 +623,44 @@
             </div>
         </div>
     </section>
+
+    <!-- Guide Download Modal -->
+    <div class="guide-modal-overlay" id="guideModal">
+        <div class="guide-modal">
+            <button class="guide-modal-close" id="guideModalClose" aria-label="Chiudi">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="guide-modal-header">
+                <div class="guide-modal-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="32" height="32"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h3>Scarica la Guida Gratuita</h3>
+                <p>Compila il form per ricevere il download immediato.</p>
+            </div>
+            <form class="guide-modal-form" id="guideForm">
+                <input type="hidden" id="guideUrl" value="">
+                <div class="form-group">
+                    <label for="guideName">Nome e Cognome</label>
+                    <input type="text" id="guideName" name="name" required placeholder="Es. Mario Rossi">
+                </div>
+                <div class="form-group">
+                    <label for="guideEmail">Email</label>
+                    <input type="email" id="guideEmail" name="email" required placeholder="Es. mario@azienda.it">
+                </div>
+                <div class="form-group">
+                    <label for="guidePhone">Telefono</label>
+                    <input type="tel" id="guidePhone" name="phone" required placeholder="Es. 329 1234567">
+                </div>
+                <div class="form-group form-group-privacy">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="guidePrivacy" required>
+                        <span>Acconsento al trattamento dei dati personali ai sensi del GDPR</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Scarica Ora</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

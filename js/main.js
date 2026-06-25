@@ -110,6 +110,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Guide download modal
+    const guideModal = document.getElementById('guideModal');
+    const guideModalClose = document.getElementById('guideModalClose');
+    const guideForm = document.getElementById('guideForm');
+    const guideUrlInput = document.getElementById('guideUrl');
+
+    document.querySelectorAll('.guide-download-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            guideUrlInput.value = btn.dataset.guide;
+            guideModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeGuideModal() {
+        guideModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    guideModalClose.addEventListener('click', closeGuideModal);
+    guideModal.addEventListener('click', e => {
+        if (e.target === guideModal) closeGuideModal();
+    });
+
+    guideForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const url = guideUrlInput.value;
+        const btn = guideForm.querySelector('button[type="submit"]');
+        btn.textContent = 'Download in corso...';
+        btn.style.background = '#2ecc71';
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        link.click();
+
+        setTimeout(() => {
+            btn.textContent = 'Scarica Ora';
+            btn.style.background = '';
+            guideForm.reset();
+            closeGuideModal();
+        }, 2000);
+    });
+
     // Contact form
     const form = document.getElementById('contactForm');
     if (form) {
