@@ -196,6 +196,15 @@
     margin-bottom: 0 !important;
 }
 
+.article-ref {
+    font-size: 0.8rem !important;
+    color: var(--text-light) !important;
+    font-style: italic;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 16px;
+    margin-top: 32px !important;
+}
+
 @media (max-width: 768px) {
     .article-header {
         padding: 40px 0 24px;
