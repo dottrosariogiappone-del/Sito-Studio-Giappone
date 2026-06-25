@@ -1327,7 +1327,7 @@ a:hover { color: var(--gold-light); }
 /* ===================== SERVICES OVERVIEW ===================== */
 .services-overview {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
 
@@ -1497,7 +1497,7 @@ a:hover { color: var(--gold-light); }
 }
 
 @media (max-width: 1024px) {
-    .services-overview { grid-template-columns: repeat(3, 1fr); }
+    .services-overview { grid-template-columns: repeat(2, 1fr); }
     .testimonials-grid { grid-template-columns: 1fr; }
     .faq-layout { grid-template-columns: 1fr; gap: 40px; }
 }
