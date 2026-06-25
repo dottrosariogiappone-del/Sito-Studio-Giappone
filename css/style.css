@@ -540,6 +540,43 @@ a:hover { color: var(--gold-light); }
     margin-bottom: 0;
 }
 
+.founder-photo {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto 32px;
+}
+
+.founder-photo img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    display: block;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(20%);
+    transition: all 0.5s ease;
+}
+
+.founder-photo:hover img {
+    filter: grayscale(0%);
+    transform: translateY(-4px);
+}
+
+.founder-photo-glow {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(ellipse, rgba(200, 169, 81, 0.2), transparent 70%);
+    filter: blur(30px);
+    z-index: 0;
+    transition: opacity 0.5s ease;
+}
+
+.founder-photo:hover .founder-photo-glow {
+    opacity: 1.3;
+}
+
 .about-card {
     position: sticky;
     top: 120px;
