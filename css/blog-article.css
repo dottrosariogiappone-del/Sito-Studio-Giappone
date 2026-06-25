@@ -138,6 +138,33 @@
     color: var(--text-light) !important;
 }
 
+.article-body ol {
+    margin-bottom: 20px;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: ol-counter;
+}
+
+.article-body ol li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text);
+    counter-increment: ol-counter;
+}
+
+.article-body ol li::before {
+    content: counter(ol-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: var(--gold);
+    font-size: 1rem;
+}
+
 .article-author-box {
     display: flex;
     align-items: center;
