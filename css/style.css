@@ -109,10 +109,14 @@ a:hover { color: var(--gold-light); }
 }
 
 .nav-logo-img {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     object-fit: cover;
+    background: white;
+    padding: 2px;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 15px rgba(200, 169, 81, 0.2);
 }
 
 .nav-logo:hover { color: var(--white); }
