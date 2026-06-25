@@ -951,7 +951,7 @@ a:hover { color: var(--gold-light); }
 /* ===================== BLOG ===================== */
 .blog-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
@@ -969,18 +969,25 @@ a:hover { color: var(--gold-light); }
 }
 
 .blog-featured {
-    grid-column: 1;
-    grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
 }
 
 .blog-image {
-    height: 240px;
+    height: 200px;
     background: var(--navy-lighter);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.03);
 }
 
 .blog-image-placeholder {
@@ -1527,6 +1534,7 @@ a:hover { color: var(--gold-light); }
 
 @media (max-width: 1024px) {
     .services-overview { grid-template-columns: repeat(2, 1fr); }
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonials-grid { grid-template-columns: 1fr; }
     .faq-layout { grid-template-columns: 1fr; gap: 40px; }
 }
